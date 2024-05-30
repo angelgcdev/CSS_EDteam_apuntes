@@ -1,0 +1,27 @@
+body {
+  /* Este es un comentario */
+  /* font-size: 200px; */
+}
+
+/*VARIABLES CSS*/
+
+:root {
+  --color: red;
+  --size:8px
+}
+
+h1{
+    font-size: calc(var(--size)*5);
+}
+
+body {
+  background: var(--color);
+}
+
+.button {
+  background: var(--color);
+}
+
+.title {
+  color: var(--color);
+}
