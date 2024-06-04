@@ -1,0 +1,28 @@
+/*Los selectores agrupados combinan varios selectores
+    -Se usan para el mismo estilo a mas de un elemento
+*/
+
+/* .first-p,
+.second-p {
+  color: green;
+  font-weight: bold;
+}
+
+.second-p {
+  font-size: 10px;
+} */
+
+/*Selectores combinados*/
+h2.title {
+  background-color: yellow;
+}
+
+/*Selectores descendientes*/
+p{
+    color: red;
+}
+
+div p{
+    color: blue;
+}
+

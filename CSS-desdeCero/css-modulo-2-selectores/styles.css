@@ -1,0 +1,99 @@
+/*  Selectores
+
+  Seleccionan a qué elemento o elementos del html se le van a aplicar los estilos.
+
+  1. Selectores simples (una palabra)
+  2. Selectores compuestos (mas de una palabra)
+  3. Selectores con operadores (+ > *)
+  4. Selectores de atributos
+  ------
+  5. Pseudoclases y Pseudoelementos
+
+
+*/
+
+/* .title{
+  color: green ;
+} */
+
+/* Selectores simples: de etiqueta
+  Son la misma etiqueta(tag) HTML
+  - Se recomenda usarlas para RESETEAR O NORMALIZAR los estilos del navegador
+*/
+
+body {
+  /* background: yellow; */
+  margin: 0;
+}
+
+h1 {
+  /* color: blue; */
+}
+
+p {
+  /* font-size: 25px; */
+}
+
+/*SON MALA PRACTICA NO LOS USES!!!*/
+
+/*-----------------------------------------*/
+
+/*Selectores de clase 
+  - Se pueden reutilizar
+  - Son los mas utilizados en CSS
+*/
+
+.color-red {
+  color: red;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: dodgerblue;
+  color: #fff;
+  border-radius: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Selector de id
+  -Usan el atributo de id de HTML 
+  -Y se escriben con #id
+  -Son mala practica porque los id se deben utilzar solo una vez
+*/
+
+#title {
+  color: yellow;
+}
+
+/*¡¡¡¡ SON MALA PRACTICA EN CSS NO LOS USES !!!!!*/
+/*¡¡¡¡ SON MAS QUE TODO PARA JAVASCRIPT  !!!!!*/

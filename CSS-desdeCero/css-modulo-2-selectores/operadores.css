@@ -1,0 +1,22 @@
+/*Son cuatro operadores
+    * (Selector universal)
+    > (Hijo Directo)
+    + (Hermano Directo)
+    ~ (Hermanos siguientes)
+*/
+
+div *{
+    color: red;
+}
+
+article > p{
+    background: yellow;
+}
+
+div + p{
+ background-color: pink;
+}
+
+div ~ p{
+    background-color: cyan;
+}
