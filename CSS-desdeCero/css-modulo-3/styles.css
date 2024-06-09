@@ -1,0 +1,136 @@
+/*Los pilares de CSS
+
+¿Cómo funciona CSS?
+
+1. La Cascada
+2. La Especificidad
+3. La Herencia
+
+Gracias a estos tres conceptos entenderas lo siguiente:
+
+1. ¿Cómo se aplican los estilos CSS?
+2. ¿Cómo se resuelven los conflictos?
+3. Arquitectura CSS
+*/
+
+h1 {
+  /* color: red; */
+  /* Especificidad: 1 */
+}
+
+.title {
+  /* color: green; */
+  /* Especificidad: 10 */
+}
+
+h1.title {
+  /* color: yellow; */
+  /* Especificidad: 11 */
+}
+
+#title {
+  /* color: blue; */
+  /* Especificidad: 100 */
+}
+
+h1#title {
+  /* color: pink; */
+  /* Especificidad: 101 */
+}
+
+h1.title#title {
+  /* color: purple; */
+  /* Especificidad: 111 */
+}
+
+body h1.title#title {
+  /* color: black; */
+  /* Especificidad: 112 */
+}
+
+/*
+
+¿Cómo se calcula la especificidad?
+
+Etiquetas y pseuelementos: 1
+Atributos y pseudoclases: 10
+Id: 100
+Estilos en linea: 1000
+
+Nota: lo recomendable dejar los selectores con la menor especificidad posible
+La buena practica: es usar clases
+Visita la pagina CSS Specifity Graph Generator: https://jonassebastianohlsson.com/specificity-graph/
+*/
+
+/*-----------------------*/
+
+/*Cascada
+  Significa que los estilos que vienen despues,
+  sobreescriben a los que están antes.
+*/
+
+/*linea 10 styles.css*/
+/* .subtitle {
+  color: pink !important;
+} */
+
+/* h2 {
+  color: red !important;
+  color: green;
+  color: yellow !important;
+  border: 1px solid red;
+  border-left: none;
+} */
+
+/*linea 800 del archivo theme.css*/
+/* .subtitle {
+  color: orange;
+} */
+
+/*Nota: '!important' es una mala practica*/
+
+/*-----------------------------------*/
+
+/*Herencia
+  Significa que un elemento hereda los estilos de su padre o ancestro.
+  Asi no tengo que escribir los estilos para todos los elementos.
+*/
+
+/* .theme-light {
+  background-color: #eee;
+  color: #111;
+}
+
+a {
+  color: initial;
+}
+
+.theme-dark {
+  background-color: #111;
+  color: #eee;
+}
+
+.container li {
+  color: initial;
+  /*initial: anula la herencia(inherit)*/
+/* } */
+
+/*Layers CSS- Capas
+  Son capas que se pueden crear para ordenar el codigo CSS y  ordenarlos por cascada
+*/
+
+@layer theme;
+@layer base;
+@layer color;
+
+@layer base {
+  h1 {
+    color: green;
+  }
+}
+
+@layer theme {
+  h1 {
+    color: red;
+  }
+}
