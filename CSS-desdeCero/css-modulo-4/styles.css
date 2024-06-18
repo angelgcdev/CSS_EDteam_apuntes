@@ -1,0 +1,157 @@
+/*
+    EL LAYOUT MODEL
+    - Usamos mucho el layout model para Resposive Web Design
+    - Todos los elementos HTML son rectángulos.
+    - Estos rectángulos son de dos tipo:
+
+        1. De bloque ( ocupan todo el espacio)
+        2. De linea(se comportan como texto)
+
+ */
+
+* {
+  box-sizing: border-box;
+}
+/*O tambien*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  background: red;
+  width: 200px;
+  height: 100px;
+}
+
+p {
+  background-color: yellow;
+  height: 100px;
+}
+
+span {
+  background: green;
+  height: 150px;
+}
+
+/*
+    PROPIEDAD: DISPLAY
+
+    div{
+        display: inline | block | inline-block | flex | grid | none;
+    }
+ */
+
+h1 {
+  display: inline;
+  /* display: none; */
+  /* visibility: hidden; Vuelve transparente al elemento */
+}
+
+p {
+  display: inline;
+}
+
+span {
+  display: inline-block;
+  width: 30px;
+}
+
+.gallery {
+  text-align: center;
+}
+
+img {
+  width: 150px;
+}
+
+/*Propiedad Margin
+  Sirve para definir el margen, que es la distancia entre el elemento y los elementos externos
+*/
+
+img {
+  /* margin: 20px; */
+
+  /* margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  margin-left: 20px; */
+
+  /*Shorthand (taquigrafia)
+  margin top right bottom left;
+  */
+  margin: 10px 5px;
+}
+
+/*Como centrear un div*/
+.container {
+  text-align: center;
+}
+
+.div-center {
+  background: red;
+  display: inline-block;
+}
+
+.div-center {
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid black;
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 220px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.card__img {
+  /* display: block; */
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.card__title {
+  margin: 0;
+}
+
+/*4.7 Propiedad padding*/
+
+/*4.9 Propiedades lógicas
+
+  Propiedades físicas:
+    margin top, right, bottom, left
+    padding top, right, bottom, left
+  
+  Propiedades lógicas:
+    margin-block-start
+    margin-block-end
+    margin-inline-start
+    margin-inline-end
+
+    padding-block-start
+    padding-block-end
+    padding-inline-start
+    padding-inline-end
+
+    - Son para paginas de idiomas en donde se lee de rtl(right to left) de derecha a izquierda
+    - Las propiedades logicas se adaptan automaticamente al cualquier lenguaje sea en el sentido en que se lean rtl(rigth to left) y ltr(left to right)
+*/
+.content {
+  background-color: yellow;
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 50px;
+  margin-block-start: 50px;
+  display: inline-block;
+  writing-mode: vertical-lr;
+  /* direction: rtl; */
+}
