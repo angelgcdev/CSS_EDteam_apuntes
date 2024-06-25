@@ -1,0 +1,137 @@
+.box {
+  width: 0;
+  /* display: inline-block; */
+  /* background-color: yellow; */
+  margin: 2em auto 0;
+  color: red;
+  /*
+  border: widht style color;
+  */
+  /* border: 10px double black; */
+  /*
+  Border es un shorthand(taquigrafia) para tres propiedades:display: 
+    border-widht
+    border-style: solid | dashed | dotted | double;
+    border-color
+  */
+
+  /* Esto es tambien es un shorthand: 
+        border-color: red green blue cyan;
+        border-style: solid dashed double dotted;
+        border-width: 5px 10px 20px 15px; */
+
+  /* border-top-color: red;
+  border-left-color: green;
+  border-bottom-color: blue;
+  border-right-color: black;
+
+  border-top-style: solid;
+  border-right-style: dotted;
+  border-bottom-style: dashed;
+  border-left-style: double;
+
+  border-top-width: 5px;
+  border-right-width: 10px;
+  border-bottom-width: 15px;
+  border-left-width: 20px; */
+
+  /* border: 5px solid black;
+  border-bottom-style: dashe; */
+
+  /*Lo mas normal es usar el shorthand:*/
+  /* border: 10px dashed lime; */
+
+  /* border: 5px solid black; */
+  /* border-bottom-style: dashed ; */
+  border-width: 10px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: red;
+}
+
+span {
+  display: inline-block;
+}
+
+/*Border radius*/
+
+.radius {
+  width: 200px;
+  height: 100px;
+  background: yellow;
+  border: 1px solid black;
+  margin: 60px auto;
+  /* border-radius: 10px 60px 90px 120px; */
+  /* border-radius: 20%; sigue la forma del elemento */
+
+  /*Se puede definir el radio en los ejes: x(horizontal) y y(vertical) con un slash(/)
+    border-radius: x / y;
+    border-radius: x x x x / y y y y;
+  */
+  /* border-radius: 25px / 75px; */
+  /* border-radius: 120px 120px 10px 10px / 10px 10px 20px 20px; */
+}
+
+/* .circle {
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+} */
+
+/*Outline
+  - Es parecido al border
+  - Pero no es parte del box model(modelo de caja)
+  - Tu puedes llenar de outlines sin problemas, si miedo a que se desenmaquete y no afectara a los demas elementos
+  - Ese es la ventaja de usar outlines, no pertenecen al box model
+  - Puedes usarlo por ejemplo en : formularios
+*/
+.radius {
+  /* outline: 2px solid red; */
+}
+
+h1 {
+  outline: 10px solid red;
+}
+
+/*Box Shadow
+  
+  Sintaxis:
+  box-shadow: h v blur spread color | inset;
+
+  h: movimiento horizontal(positivo: derecha)
+  v: movimiento vertical(negativo: abajo)
+  blur: difuminado(que tan borrosa es la sombra)
+  spread: propagarse, es que tanto crece o se comprime la sombra en sus cuartro lados.
+
+*/
+body {
+  background: #444;
+}
+
+.radius {
+  background: #555;
+  border: 4px solid black;
+  border-radius: 5px;
+  /* box-shadow: 0 0 0 2px red, 0 0 0 4px white, 0 0 0 6px blue; */
+  box-shadow: 0 2px 3px -3px rgba(0, 0, 0, 0.6),
+    12px 0 10px -10px rgb(208, 87, 245), -12px 0 10px -10px rgb(50, 88, 255),
+    0 -12px 10px -10px rgb(56, 248, 98);
+}
+
+.sphere {
+  width: 100px;
+  height: 100px;
+  margin: 2em auto;
+  background: rgb(217, 95, 247);
+  border-radius: 50%;
+  /* box-shadow: 0 0 10px 20px #fff; */
+  box-shadow: -6px -6px 8px rgba(0, 0, 0, 0.5) inset,
+    1px 2px 2px rgba(255, 255, 255, 0.4) inset,
+    6px 6px 12px rgba(255, 255, 255, 0.4) inset;
+}
+
+
+
